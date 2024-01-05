@@ -125,3 +125,93 @@ html {
     display: none;
   }
 }
+
+/* Overview */
+.overview-para {
+  font-size: 14px;
+}
+@media screen and (max-width: 600px) {
+  .overview-para {
+    text-align: justify !important;
+  }
+}
+/* .overview_img {
+  height: 400px;
+} */
+
+.overview_img img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  border-radius: 50px 15 px;
+}
+
+/* Highlights */
+.highlights li:before {
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: var(--colorPrimary);
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.highlights li::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  width: 0;
+  background: var(--colorPrimary);
+  top: 0;
+  z-index: 1;
+  transition: ease all 0.5s;
+  clip-path: circle(10% at 0% 0%);
+}
+
+.highlights li {
+  background: #eaeaea;
+  margin-bottom: 15px;
+  padding: 15px 10px 15px 30px;
+  position: relative;
+  list-style: none;
+}
+
+.highlights {
+  content: "";
+  padding-left: 0;
+}
+
+.highlights li:hover::after {
+  width: 100%;
+  transition: ease all 0.5s;
+  clip-path: circle(100%);
+}
+
+.highlights li:hover:before {
+  background: var(--colorWhite);
+  transition: ease all 0.5s;
+}
+
+.highlights li:hover {
+  color: var(--colorWhite);
+  transition: ease all 0.5s;
+}
+
+.highlights li span {
+  position: relative;
+  z-index: 2;
+  padding-left: 5px;
+}
+
+.cardbtn {
+  position: absolute;
+  top: 150px;
+  left: 120px;
+}
+.cardbtn span {
+  position: relative;
+}
