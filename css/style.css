@@ -146,6 +146,27 @@ html {
   border-radius: 50px 15 px;
 }
 
+/* Counter */
+.counter_container {
+  min-height: max-content;
+}
+.counter_container .col-6 {
+  padding: 25px;
+}
+
+.counter_container .row:first-child {
+  border-bottom: 1px solid var(--colorBackgroundOverlay);
+}
+.counter_container .row .col-6:nth-child(even) {
+  border-left: 1px solid var(--colorBackgroundBlack);
+}
+
+.counter_container .col-6 h4 {
+  color: var(--colorPrimary);
+  font-size: 1.7em;
+  font-weight: 700;
+}
+
 /* Highlights */
 .highlights li:before {
   content: "";
