@@ -16,3 +16,6 @@ $(".count").each(function () {
       }
     );
 });
+
+// Fancy Box
+// Fancybox.bind('[data-fancybox="gallery"]', {});
