@@ -437,6 +437,10 @@ figure.fig_img.hover h3 {
   font-size: 1.5em;
 }
 
+#about_section .sub-heading {
+  letter-spacing: 3.5px;
+}
+
 .form-label {
   display: none;
 }
