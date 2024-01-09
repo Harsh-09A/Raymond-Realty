@@ -34,6 +34,11 @@ html {
   --colorBackgroundOverlay: #00000070;
   --colorWhiteOverlay: rgba(212, 210, 212, 1);
   --colorBoxShadow: rgba(0, 0, 0, 0.075);
+  --colorBrownBackground: #504140;
+  --colorBrown: #372e28;
+
+  --highlightsBorder: #a45a52;
+  --highlightsBackground: #a45a52;
 }
 
 /* Navbar */
@@ -171,67 +176,48 @@ html {
 
 /* Highlights */
 #highlights_section {
-  background: #eaeaea;
-}
-
-.highlights li:before {
-  content: "";
-  height: 8px;
-  width: 8px;
-  background: var(--colorPrimary);
-  position: absolute;
-  left: 16px;
-  top: 20px;
-  border-radius: 50%;
-  z-index: 2;
-}
-
-.highlights li::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  left: 0;
-  width: 0;
-  background: var(--colorPrimary);
-  top: 0;
-  z-index: 1;
-  transition: ease all 0.5s;
-  clip-path: circle(10% at 0% 0%);
-}
-
-.highlights li {
-  background: #eaeaea;
-  margin-bottom: 15px;
-  padding: 15px 10px 15px 30px;
-  position: relative;
-  list-style: none;
-}
-
-.highlights {
-  content: "";
-  padding-left: 0;
-}
-
-.highlights li:hover::after {
-  width: 100%;
-  transition: ease all 0.5s;
-  clip-path: circle(100%);
-}
-
-.highlights li:hover:before {
-  background: var(--colorWhite);
-  transition: ease all 0.5s;
-}
-
-.highlights li:hover {
+  /* background: #eaeaea; */
+  background: var(--highlightsBackground);
   color: var(--colorWhite);
-  transition: ease all 0.5s;
+}
+.highlights li {
+  font-size: 1.2em;
+  text-decoration: none;
+  list-style: none;
+  line-height: 2em;
+  border-bottom: 1px solid var(--highlightsBorder);
+  padding: 10px 0;
 }
 
-.highlights li span {
-  position: relative;
-  z-index: 2;
-  padding-left: 5px;
+.highlights li:first-child {
+  border-top: 1px solid var(--highlightsBorder);
+}
+
+.fa-square-check {
+  font-size: 2em;
+  vertical-align: middle;
+  margin-right: 30px;
+}
+
+/* .background_element {
+  background-image: url("../img/elements/form-theme-element.svg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: right;
+} */
+
+/* background-image: url("../img/elements/form-theme-element.svg") !important;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  background-position: right; */
+
+#highlights_section {
+  background-image: url("../img/backgrounds/pattern-3.jpg"); /* The image used */
+  /* background-color: #cccccc; Used if the image is unavailable */
+
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 /* Configuration */
