@@ -17,15 +17,22 @@ async function getIpAddress() {
 }
 
 // Form Submit
-const handleFormSubmit = async (formId, nameField, emailField, phoneField) => {
+const handleFormSubmit = async (
+  formId,
+  nameField,
+  emailField,
+  phoneField,
+  privacyField
+) => {
   const templateParams = {
     user_name: document.getElementById(nameField).value,
     user_email: document.getElementById(emailField).value,
     contact_number: document.getElementById(phoneField).value,
+    privacy_check: document.getElementById(privacyField).value,
     ip_address: await getIpAddress(),
 
     to_email: "harsh.autowebbed@gmail.com",
-    company_name: "Shreeji Infinity",
+    company_name: "Raymond Realty",
   };
 
   // Send Form
@@ -55,7 +62,8 @@ window.onload = function () {
         "contact-form",
         "user_name",
         "user_email",
-        "contact_number"
+        "contact_number",
+        "privacy_check"
       );
     });
 
@@ -67,7 +75,8 @@ window.onload = function () {
         "contact-form-modal",
         "user_name_modal",
         "user_email_modal",
-        "contact_number_modal"
+        "contact_number_modal",
+        "privacy_check_modal"
       );
     });
 };

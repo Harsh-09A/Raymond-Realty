@@ -684,3 +684,13 @@ figure.fig_img.hover h3 {
 /* .contact_details {
   text-align: justify;
 } */
+
+.read_more2 {
+  background-color: transparent;
+  font-size: 14px;
+  margin: 0;
+  border-radius: 0;
+  width: fit-content;
+  padding-left: 10px;
+  color: var(--colorPrimary);
+}
